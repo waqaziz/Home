@@ -10,42 +10,13 @@ The key part of working with development feeds is getting your environment set u
 
 In order to be able to get new builds of the DNX, and switch between them, you need to get the .NET Version Manager (DNVM) command line tool.
 
-## Getting Started on Windows
+## Getting Started
 
-The easiest way to get started on Windows is to grab the latest preview of Visual Studio 2015, which can be found [here](http://go.microsoft.com/fwlink/?LinkId=521794).
+There are getting started guides for Windows, Mac OS X and Linux on the [ASP.NET Documentation Site](http://docs.asp.net). We suggest installing and using the .NET Version Manager (DNVM) to allow you to manage multiple different versions of the DNX. Instructions for installing DNVM are provided on the relevant Getting Started pages on the documentation site:
 
-Visual Studio will install DNVM for you, so if you open a command prompt and type `dnvm` you should get some help text.
-
-### Upgrading DNVM or running without Visual Studio
-
-If you don't want to install Visual Studio or want to upgrade DNVM to the latest version then you need to run the following command:
-
-####CMD
-```
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
-```
-
-####Powershell
-```
-&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}
-```
-
-This will download the DNVM script and put it in your user profile. You can check the location of DNVM by running the following in a cmd prompt:
-
-```
-where dnvm
-```
-
-> If the output of `where dnvm` shows a program files location before the user profile, or doesn't show an entry in user profile, then the install has either failed or your PATH is incorrect. After installing dnvm you should have the dnvm script in `%USERPROFILE%\.dnx\bin` and that path needs to be on your PATH.
-
-## OS X
-
-See the instructions on the ASP.NET 5 Documentation site: [Installing ASP.NET 5 on Mac OS X](http://docs.asp.net/en/latest/getting-started/installing-on-mac.html)
-
-## Linux
-
-* [Debian, Ubuntu and derivatives see here](GettingStartedDeb.md)
-* **CentOS, Fedora and derivatives don't currently have a separate guide. We should have one soon. The commands are mostly the same, with some differences to account for the different package manager**
+* [Windows](http://docs.asp.net/en/latest/getting-started/installing-on-windows.html)
+* [Mac OS X](http://docs.asp.net/en/latest/getting-started/installing-on-mac.html)
+* [Linux](http://docs.asp.net/en/latest/getting-started/installing-on-linux.html)
 
 # Running an application
 
